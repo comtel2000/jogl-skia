@@ -10,9 +10,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>16</maven.compiler.source>
 		<maven.compiler.target>16</maven.compiler.target>
-		<javafx.version>16</javafx.version>
+		<javafx.version>17-ea+11</javafx.version>
 
-		<skija.version>0.92.1</skija.version>
+		<skija.version>0.92.11</skija.version>
 		<skija.platform>windows</skija.platform>
 
 		<jogl.version>v2.4.0-rc-20210111</jogl.version>
