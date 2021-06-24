@@ -10,6 +10,8 @@ https://github.com/jzy3d/jogl-maven-deployer
 
 JavaSDK path must be changed to your local one
 
+https://gluonhq.com/products/javafx/
+
 ```xml
 <javafx16sdk>/Library/Java/JavaFX/javafx-sdk-16/lib</javafx16sdk>
 ```
@@ -20,6 +22,14 @@ run with other OS than MacOS x64 please change the jogl and skija platform
 <skija.platform>macos-x64</skija.platform>
 <jogl.platform>macosx-universal</jogl.platform>
 ```
+
+run with jdk16
+
+```
+mvn verify exec:java
+```
+
+IDE vm params
 
 ```
 --module-path /Library/Java/JavaFX/javafx-sdk-16/lib 
