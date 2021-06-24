@@ -10,14 +10,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>16</maven.compiler.source>
 		<maven.compiler.target>16</maven.compiler.target>
-		<javafx.version>17-ea+11</javafx.version>
+		<javafx.version>16</javafx.version>
 
 		<skija.version>0.92.11</skija.version>
-		<skija.platform>windows</skija.platform>
+		<skija.platform>macos-x64</skija.platform>
 
 		<jogl.version>v2.4.0-rc-20210111</jogl.version>
-		<jogl.platform>windows-amd64</jogl.platform>
-		<javafx16sdk>C:\\Java\\openjfx\\javafx-sdk-16\\lib</javafx16sdk>
+		<jogl.platform>macosx-universal</jogl.platform>
+		<javafx16sdk>/Library/Java/JavaFX/javafx-sdk-16/lib</javafx16sdk>
 	</properties>
 
 	<dependencies>
@@ -91,6 +91,7 @@
 				</executions>
 				<configuration>
 					<mainClass>org.comtel2000.jogl.sample.Demo</mainClass>
+					<detail>true</detail>
 					<arguments>
 						<argument>--module-path ${javafx16sdk}</argument>
 						<argument>--add-modules javafx.controls</argument>
@@ -98,6 +99,7 @@
 						<argument>--add-opens javafx.graphics/com.sun.javafx.tk.quantum=ALL-UNNAMED</argument>
 						<argument>--add-opens javafx.graphics/com.sun.glass.ui=ALL-UNNAMED</argument>
 						<argument>--add-opens javafx.graphics/javafx.stage=ALL-UNNAMED</argument>
+						<argument>-Djava.awt.headless=true</argument>
 						<argument>-Djogamp.debug.JNILibLoader=true</argument>
 						<argument>-Djogamp.debug.NativeLibrary=true</argument>
 					</arguments>
